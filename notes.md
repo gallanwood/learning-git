@@ -42,6 +42,7 @@
 - Git keeps a version of all staged files when they are commited
 - Remember to add files so that they become staged before running a commit
 - `git commit add somefile.txt` followed by `git commit --amend` overwrites a previous commit without creating a new one. Use only locally
+- `git checkout --orphan new-master master` to create a branch that can be used to squash commmits. Follow with `git commit -m "fresh initial commit message"` and overwrite the old master branch reference with the new one `git branch -M new-master master`
 
 ### Log
 
