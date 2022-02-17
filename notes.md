@@ -30,8 +30,8 @@
 
 ### Status and Diff
 - `git status` lists files with their current Git status
-- newly added files display as 'new file'
-- files that are staged and then edited prior to a commit are shown as 'modified'
+- newly added files display as *new file*
+- files that are staged and then edited prior to a commit are shown as *modified*
 - `git add` a file directly before running commit if you want any changes to be commited, otherwise the repo will not be updated for that file.
 - `git diff somefile.txt` shows any code differences between a staged file and the actual file saved in the project's workspace
 
@@ -41,18 +41,15 @@
 - `git commit -m 'correct the urls in home page'` is a quick way to include the commit message within the commit command
 - Git keeps a version of all staged files when they are commited
 - Remember to add files so that they become staged before running a commit
-- `git commit add somefile.txt` followed by `git commit --amend` overwrites a previous commit without creating a new one. Use only locally
+- `git commit --amend` overwrites a previous commit without creating a new one. Use only locally
 - `git checkout --orphan new-master master` to create a branch that can be used to squash commmits. Follow with `git commit -m "fresh initial commit message"` and overwrite the old master branch reference with the new one `git branch -M new-master master`
 
 ### Log
 
-- `git log` displays the commit hash, branch, author and date for each commit, eg: 
-  >`commit 94ab7575ecf8d732d1f1e722aafad1ca625197b1 (HEAD -> master)
-Author: gallanwood <gavin@allanwood.co.uk>
-Date:   Sat Jan 29 23:35:36 2022 +0000`
+- `git log` displays the commit hash, branch, author and date for each commit 
 - `git log --oneline` displays the comment for every commit, one per line
 - `git log --graph` displays logs organised as a graph of branches
-- `git show 94ab7575ecf8d732d1f1e722aafad1ca625197b1` shows any changes made to a specific commit
+- `git show 94ab7575ecf8d732d1f1e722aafad1ca625197b1` shows any changes made to a specific commit, identified by its hash
 
 ### Alias
 
@@ -73,7 +70,7 @@ Date:   Sat Jan 29 23:35:36 2022 +0000`
 ## Branching
 
 - A Branch is an alternate codebase timeline created from an existing branch, usually the Master branch
-- Isolated changes and additions can be made in the branch without affecting the Master
+- Isolated changes and additions can be made in a branch without affecting other branches
 - A branch can be merged into the master when the changes are complete
 - If conflicts occur between a branch and the Master they can be resolved during the merge
 - `git branch` displays current branches.
@@ -81,6 +78,7 @@ Date:   Sat Jan 29 23:35:36 2022 +0000`
 - `git branch -v` shows the most recent commit for every Branch
 - `git checkout -b 'branch-name'` creates a new branch including all the tracked files in the current Git folder and switches to the new branch.
 - `git checkout master` switches to the Master branch or any other (using tab will help autocomplete the name)
+- When a branch is checked-out, local files change to match its content
 - `git branch -d somebranch` to delete a branch
 
 ### Merge
@@ -129,6 +127,7 @@ Date:   Sat Jan 29 23:35:36 2022 +0000`
 - `git add .`
 - `git commit -m 'Change something'`
 - `git push` to push the change to GitHub
+- `git push --force` when the remote repo gets ahead of the local, eg: due to a `git commit --amend`
   
 ### Clone from Github
 
