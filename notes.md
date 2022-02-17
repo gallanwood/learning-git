@@ -1,5 +1,27 @@
 
 # Git Notes
+
+
+  - [Basic Commands](#basic-commands)
+    - [Configuration](#configuration)
+    - [Initialisation](#initialisation)
+    - [Local Files](#local-files)
+    - [Staging](#staging)
+    - [Status and Diff](#status-and-diff)
+    - [Commit](#commit)
+    - [Log](#log)
+    - [Alias](#alias)
+    - [Delete and Reset](#delete-and-reset)
+  - [Branching](#branching)
+    - [Merge](#merge)
+    - [Merge and Diff](#merge-and-diff)
+    - [Stash](#stash)
+  - [GitHub](#github)
+    - [Create a repo - reminder](#create-a-repo---reminder)
+    - [Create a remote](#create-a-remote)
+    - [Push to Github](#push-to-github)
+    - [Clone from Github](#clone-from-github)
+
 ## Basic Commands
 
 ### Configuration
