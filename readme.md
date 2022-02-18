@@ -104,9 +104,15 @@
 
 ### Merge
 
-- `git add .` and `git commit` in the branch before switching to the master to merge
-- `git checkout master` and then `git merge branch-name` to merge the branch with the Master
-- `git branch -d branch-name` to delete the branch after it has been merged with the Master
+- `git branch -v` to list branches
+- Example when merging work done in a *dev* branch to the master:
+- `git add .` and `git commit` in the *dev* branch
+- `git checkout master` to switch to the master
+- `git merge dev` to merge the *dev* branch with the Master
+- Example when merging work done in the master with a *pages* branch to update a GitHub pages source:
+- `git add .` and `git commit` in the master branch
+- `git checkout pages` to switch to the *pages* branch
+- `git merge master` to merge the master branch with the *pages* branch
 
 ### Merge and Diff
 
