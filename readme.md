@@ -32,6 +32,7 @@
   - `git config --global editor = 'code';` use 'code' for VSCode
   - `git config --global username = 'Gavin Allanwood';`
   - `git config --list` to view the global configuration
+  - `git config --global core.excludesfile ~/Sites/.gitignore_global` configures Git to use a global exclude file, in this case located in the user's *Sites* directory
 
 ### Initialisation
 - By default, Git works on all files in an initialised project directory, including existing and new files and sub-directories. You probably shouldn't initialise Git in a directory that is already included in another Git repository further up in the file heirarchy.
