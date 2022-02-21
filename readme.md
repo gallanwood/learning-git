@@ -19,8 +19,8 @@
   - [GitHub](#github)
     - [Create a repo - reminder](#create-a-repo---reminder)
     - [Create a remote](#create-a-remote)
-    - [Push to Github](#push-to-github)
-    - [Clone from Github](#clone-from-github)
+    - [Push to GitHub](#push-to-github)
+    - [Clone from GitHub](#clone-from-github)
 
 ## Basic Commands
 
@@ -38,7 +38,7 @@
 - By default, Git works on all files in an initialised project directory, including existing and new files and sub-directories. You probably shouldn't initialise Git in a directory that is already included in another Git repository further up in the file heirarchy.
 - `git init` initialises a Git directory within the current project path
 - Subdirectorys within the project directory will be included in the repo
-- VS Code hides the Git directory by default. Use `ls-la` to see it or change the `files-exclude` setting in Code to stop hiding the Git directory in the Explorer. This is not strictly necessary as access to the files is unlikely to be needed.
+- VS Code hides the Git directory by default. Use `ls -la` to see it or change the `files-exclude` setting in Code to stop hiding the Git directory in the Explorer. This is not strictly necessary as access to the files is unlikely to be needed.
 
 ### Local Files
 - Quickly create local files to practice Git
@@ -55,8 +55,8 @@
 - `git status` lists files with their current Git status
 - newly added files display as *new file*
 - files that are staged and then edited prior to a commit are shown as *modified*
-- `git add` a file directly before running commit if you want any changes to be commited, otherwise the repo will not be updated for that file.
-- `git diff somefile.txt` shows any code differences between a staged file and the actual file saved in the project's workspace
+- `git add somefile.txt` directly before running commit if you want any changes to be commited, otherwise the repo will not be updated for that file
+- `git diff somefile.txt` shows any code differences between a staged file and the actual file saved in the project's working directory
 
 ### Commit
 
@@ -96,7 +96,7 @@
 - If conflicts occur between a branch and the Master they can be resolved during the merge
 - `git branch` displays current branches.
 - A new project will show `* [master]` branch. The asterisk means that it is the currently active branch
-- `git branch -v` shows the most recent commit for every Branch
+- `git branch -v` shows the most recent commit for every branch
 - `git checkout -b 'branch-name'` creates a new branch including all the tracked files in the current Git directory and switches to the new branch.
 - `git checkout master` switches to the Master branch or any other (using tab will help autocomplete the name)
 - When a branch is checked-out, local files change to match its content
@@ -104,15 +104,18 @@
 
 ### Merge
 
-- `git branch -v` to list branches
+- `git branch -v` to list branches and see which is ahead
 - Example when merging work done in a *dev* branch to the master:
 - `git add .` and `git commit` in the *dev* branch
 - `git checkout master` to switch to the master
 - `git merge dev` to merge the *dev* branch with the Master
-- Example when merging work done in the master with a *pages* branch to update a GitHub pages source:
+- `git branch -v` to check that the branches are in sync
+- Example when merging work done in the master with a *pages* branch to update *pages* source on GitHub:
 - `git add .` and `git commit` in the master branch
 - `git checkout pages` to switch to the *pages* branch
 - `git merge master` to merge the master branch with the *pages* branch
+- `git branch -v` to check that the branches are in sync
+- `git push` to update the remote *pages* branch for GitHub pages
 
 ### Merge and Diff
 
@@ -145,10 +148,10 @@
 ### Create a remote
 
 - Create a new repo in GitHub with the same name as the local eg: 'project'
-- `git remote add origin https://Github.com/gallanwood/project.Git` copied from the GitHub 'Quick Setup' page
+- `git remote add origin https://GitHub.com/gallanwood/project.Git` copied from the GitHub 'Quick Setup' page
 - `git remote remove origin` if you need to remove a remote connection 
 
-### Push to Github
+### Push to GitHub
 - `git push -u origin master` pushes the local files to the repo. The `-u` flag sets the status to 'upstream'
 - make a change to a **local** file and save it so that it displays the `M` flag in the VSCode file view
 - `git add .`
@@ -156,11 +159,11 @@
 - `git push` to push the change to GitHub
 - `git push --force` when the remote repo gets ahead of the local, eg: due to a `git commit --amend`
   
-### Clone from Github
+### Clone from GitHub
 
-- Find the green `Code` button/dropdown in GitHub's repository view and copy the Clone link eg: `https://Github.com/gallanwood/Git-laravel-test.Git`
+- Find the green `Code` button/dropdown in GitHub's repository view and copy the Clone link eg: `https://GitHub.com/gallanwood/Git-laravel-test.Git`
 - `git init` inside a fresh directory, locally or on another computer
-- `git clone https://Github.com/gallanwood/Git-laravel-test.Git` including the link after the command. Git will create a directory with the same name as the repo.
+- `git clone https://GitHub.com/gallanwood/Git-laravel-test.Git` including the link after the command. Git will create a directory with the same name as the repo.
   
 
 
